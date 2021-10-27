@@ -4,6 +4,9 @@
     <string name="aqua_logo">Logo do AquaInfo</string>
     <string name="titulo_medidas">Entre com as medidas do seu aquário:</string>
     <string name="medida_altura">Altura:</string>
+    <string name="entrada_altura">Altura / cm</string>
     <string name="medida_largura">Largura:</string>
+    <string name="entrada_largura">Largura / cm</string>
     <string name="medida_comprimento">Comprimento:</string>
+    <string name="entrada_comprimento">Comprimento / cm</string>
 </resources>

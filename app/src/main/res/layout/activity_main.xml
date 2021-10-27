@@ -11,6 +11,33 @@
         android:layout_height="wrap_content"
         tools:context=".MainActivity">
 
+        <EditText
+            android:id="@+id/txtEntradaComprimento"
+            android:importantForAutofill="no"
+            android:layout_width="117dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/entrada_comprimento"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/txtEntradaLargura" />
+
+        <EditText
+            android:id="@+id/txtEntradaLargura"
+            android:importantForAutofill="no"
+
+            android:layout_width="117dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/entrada_largura"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/txtEntradaAltura" />
+
         <TextView
             android:id="@+id/txtAltura"
             android:layout_width="wrap_content"
@@ -90,6 +117,7 @@
             android:fontFamily="sans-serif-smallcaps"
             android:padding="20dp"
             android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:text="@string/titulo_medidas"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -110,6 +138,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="205dp" />
+            app:layout_constraintGuide_begin="164dp" />
+
+        <EditText
+            android:id="@+id/txtEntradaAltura"
+            android:importantForAutofill="no"
+            android:layout_width="117dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:hint="@string/entrada_altura"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
