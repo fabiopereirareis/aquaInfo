@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AquaInfo</string>
+    <string name="aqua_medidas">Foto medidas do aquário</string>
+    <string name="aqua_logo">Logo do AquaInfo</string>
 </resources>
