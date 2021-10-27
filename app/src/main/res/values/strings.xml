@@ -2,4 +2,8 @@
     <string name="app_name">AquaInfo</string>
     <string name="aqua_medidas">Foto medidas do aquário</string>
     <string name="aqua_logo">Logo do AquaInfo</string>
+    <string name="titulo_medidas">Entre com as medidas do seu aquário:</string>
+    <string name="medida_altura">Altura:</string>
+    <string name="medida_largura">Largura:</string>
+    <string name="medida_comprimento">Comprimento:</string>
 </resources>
