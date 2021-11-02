@@ -12,4 +12,5 @@
     <string name="botao_calcular">Calcular</string>
     <string name="saida_litragem">Litragem do Aquário</string>
     <string name="teste">teste</string>
+    <string name="saida_vazia"></string>
 </resources>
