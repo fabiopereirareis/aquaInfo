@@ -11,6 +11,12 @@
     <string name="entrada_comprimento">Comprimento / cm</string>
     <string name="botao_calcular">Calcular</string>
     <string name="saida_litragem">Litragem do Aquário</string>
+    <string name="saida_filtro">Filtro Recomendado:</string>
+    <string name="saida_aquecedor">Aquecedor Recomendado:</string>
+    <string name="saida_iluminacao">Iluminação Recomendada:</string>
+    <string name="saida_desconto">Descontar decoração?</string>
+    <string name="radio_sim">Sim</string>
+    <string name="radio_nao">Não</string>
     <string name="teste">teste</string>
     <string name="saida_vazia"></string>
 </resources>
