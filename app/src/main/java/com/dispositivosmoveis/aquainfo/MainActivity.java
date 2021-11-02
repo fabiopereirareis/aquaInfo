@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.dispositivosmoveis.aquainfo.metodos.Metodos;
@@ -26,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
 //        classe que contém métodos globais para o projeto
         Metodos metodos = new Metodos();
 
+//        objetos da inteface de usuário
+        TextView teste = findViewById(R.id.textView);
+        RadioButton radioSim = findViewById(R.id.radioSim);
+        RadioButton radioNao = findViewById(R.id.radioNao);
+
 //        dados de entrada
         EditText entradaAltura = findViewById(R.id.txtEntradaAltura);
         EditText entradaLargura = findViewById(R.id.txtEntradaLargura);
@@ -40,10 +46,14 @@ public class MainActivity extends AppCompatActivity {
         Aquario aquario = new Aquario(largura,altura,comprimento);
 
 //        saída de dados para o usuário
-        TextView teste = findViewById(R.id.textView);
 
 //        calculo da litragem do aquário
-        teste.setText(aquario.calcularLitragem(aquario));
+        String resultado = "";
+        if(radioSim.isChecked()){
+            teste.setText(aquario.calcularLitragem(aquario,'s'));
+        }else if(radioNao.isChecked()){
+            teste.setText(aquario.calcularLitragem(aquario,'n'));
+        }
 
     }
 

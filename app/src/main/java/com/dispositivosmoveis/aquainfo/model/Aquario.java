@@ -6,15 +6,20 @@ public class Aquario {
     private float altura;
     private float comprimento;
 
+
     // método para calcular a litragem do aquário
-    public String calcularLitragem(Aquario aquario){
-        float resultado = (aquario.getComprimento() * aquario.getLargura() * aquario.getAltura()) / 1000f;
+    public String calcularLitragem(Aquario aquario, char desconto){
+        float resultado = 0.0f ;
+
+        if (desconto == 's'){
+            resultado = (aquario.getComprimento() * aquario.getLargura() * aquario.getAltura()) / 1000f;
+            resultado *= 0.85f ;
+        }
+        if (desconto == 'n'){
+            resultado = (aquario.getComprimento() * aquario.getLargura() * aquario.getAltura()) / 1000f;
+        }
         return String.valueOf(resultado) + "/Litros";
 
-    }// método para calcular a litragem do aquário
-    public float calcularLitragemValor(Aquario aquario){
-        float resultado = (aquario.getComprimento() * aquario.getLargura() * aquario.getAltura()) / 1000f;
-        return resultado;
     }
 
 //    métodos construtores
