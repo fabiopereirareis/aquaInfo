@@ -5,6 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.dispositivosmoveis.aquainfo.metodos.Metodos;
+import com.google.android.material.textfield.TextInputEditText;
+
+import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,9 +20,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-//    Button btnCalcular = (Button) findViewById(R.id.btn_calcular);
+    
     public void calcularLitragem(View view){
-//        return null;
+        Metodos metodos = new Metodos();
+//        dados de entrada
+        EditText altura = findViewById(R.id.txtEntradaAltura);
+        EditText largura = findViewById(R.id.txtEntradaLargura);
+        EditText comprimento = findViewById(R.id.txtEntradaComprimento);
+
+        TextView teste = findViewById(R.id.textView);
+
+        teste.setText(metodos.calcularLitragem(altura,largura,comprimento));
+
     }
 
 }
