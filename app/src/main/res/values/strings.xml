@@ -9,4 +9,7 @@
     <string name="entrada_largura">Largura / cm</string>
     <string name="medida_comprimento">Comprimento:</string>
     <string name="entrada_comprimento">Comprimento / cm</string>
+    <string name="botao_calcular">Calcular</string>
+    <string name="saida_litragem">Litragem do Aquário</string>
+    <string name="teste">teste</string>
 </resources>

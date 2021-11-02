@@ -13,12 +13,12 @@
 
         <EditText
             android:id="@+id/txtEntradaComprimento"
-            android:importantForAutofill="no"
             android:layout_width="117dp"
             android:layout_height="0dp"
             android:layout_marginTop="10dp"
             android:ems="10"
             android:hint="@string/entrada_comprimento"
+            android:importantForAutofill="no"
             android:inputType="number|numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline4"
@@ -26,13 +26,13 @@
 
         <EditText
             android:id="@+id/txtEntradaLargura"
-            android:importantForAutofill="no"
-
             android:layout_width="117dp"
+
             android:layout_height="0dp"
             android:layout_marginTop="10dp"
             android:ems="10"
             android:hint="@string/entrada_largura"
+            android:importantForAutofill="no"
             android:inputType="number|numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline4"
@@ -142,15 +142,48 @@
 
         <EditText
             android:id="@+id/txtEntradaAltura"
-            android:importantForAutofill="no"
             android:layout_width="117dp"
             android:layout_height="0dp"
             android:ems="10"
             android:hint="@string/entrada_altura"
+            android:importantForAutofill="no"
             android:inputType="number|numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline4"
             app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/teste"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/txtSaidaLitragem" />
+
+        <Button
+            android:id="@+id/btn_calcular"
+            android:layout_width="143dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="10dp"
+            android:onClick="calcularLitragem"
+            android:text="@string/botao_calcular"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/txtComprimento" />
+
+        <TextView
+            android:id="@+id/txtSaidaLitragem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/saida_litragem"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/txtEntradaComprimento" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
