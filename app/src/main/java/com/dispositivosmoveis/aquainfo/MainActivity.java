@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         TextView saidaAquecedor = findViewById(R.id.saidaAquecedor);
         RadioButton radioSim = findViewById(R.id.radioSim);
         RadioButton radioNao = findViewById(R.id.radioNao);
+        CheckBox checkBoxPlantas = findViewById(R.id.checkBoxPlantas);
 
 //        dados de entrada
         EditText entradaAltura = findViewById(R.id.txtEntradaAltura);
@@ -48,34 +50,29 @@ public class MainActivity extends AppCompatActivity {
 //        instanciação do objeto aquário
         Aquario aquario = new Aquario(largura,altura,comprimento);
 
-//        saída de dados para o usuário
 
-////        calculo da litragem do aquário
-//        String resultado = "";
-//        if(radioSim.isChecked()){
-//            teste.setText(aquario.calcularLitragem(aquario,'s'));
-//        }else if(radioNao.isChecked()){
-//            teste.setText(aquario.calcularLitragem(aquario,'n'));
-//        }
 //        calculo da litragem do aquário
         String strLitragem = "";
         String strFiltro = "";
         String strIluminacao = "";
         String strAquecimento = "";
+        boolean plantas = false;
         float litragem = 0.0f;
-//        int vazaoFiltro = 0;
+        if(checkBoxPlantas.isChecked()){
+            plantas = true;
+        }
         if(radioSim.isChecked()){
             litragem = aquario.calcularLitragemFloat(aquario,'s');
-//            vazaoFiltro = aquario.calcularFiltro(litragem);
             strLitragem = metodos.converteFloatString(litragem);
             strFiltro = aquario.calcularFiltro(litragem);
-//            strIluminacao = aquario.calcularIluminacao(litragem);
             strAquecimento = aquario.calcularAquecimento(litragem);
-//            strLitragem = aquario.calcularLitragem(litragem);
+            strIluminacao = aquario.calcularIluminacao(litragem,plantas);
 
         }else if(radioNao.isChecked()){
             teste.setText(aquario.calcularLitragem(aquario,'n'));
         }
+
+//        saída de dados para o usuário
         teste.setText(strLitragem);
         saidaFiltro.setText(strFiltro);
         saidaIluminacao.setText(strIluminacao);
