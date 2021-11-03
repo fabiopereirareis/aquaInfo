@@ -20,7 +20,8 @@ public class Aquario {
         }
         return String.valueOf(resultado) + "/Litros";
     }
-    // método para calcular a litragem do aquário
+
+//     método para calcular a litragem do aquário
     public float calcularLitragemFloat(Aquario aquario, char desconto){
         float resultado = 0.0f ;
 
@@ -33,19 +34,20 @@ public class Aquario {
         }
         return resultado;
     }
+
 //    método para calcular o filtro adequado
     public String calcularFiltro(float litragem){
         int vazao = (int) (litragem * 5);
-        return String.valueOf(vazao);
+        return String.valueOf(vazao) + " l/h";
     }
 
-    //    método para calcular a iluminação adequado
+//    método para calcular o aquecimento adequado
     public String calcularAquecimento(float litragem){
         int aquecimento = (int) (litragem * 1);
-        return String.valueOf(aquecimento);
+        return String.valueOf(aquecimento) + " w/l";
     }
 
-    //    método para calcular o aquecimento adequado
+//    método para calcular a iluminação adequado
     public String calcularIluminacao(float litragem, boolean plantas){
         int iluminacao = 0;
         if(plantas){
@@ -53,7 +55,7 @@ public class Aquario {
         }else{
             iluminacao = (int) (litragem / 2);
         }
-        return String.valueOf(iluminacao);
+        return String.valueOf(iluminacao) + " w/l";
     }
 
 //    métodos construtores

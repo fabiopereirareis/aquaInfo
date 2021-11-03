@@ -16,9 +16,6 @@ public class Metodos {
         String converte = String.valueOf(dados);
         return converte;
     }
-    public String converteIntString(int dados){
-        String converte = String.valueOf(dados);
-        return converte;
-    }
+  
 
 }
