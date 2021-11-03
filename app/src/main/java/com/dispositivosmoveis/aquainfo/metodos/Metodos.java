@@ -12,5 +12,13 @@ public class Metodos {
         Float converte = Float.parseFloat(dados);
         return converte;
     }
+    public String converteFloatString(float dados){
+        String converte = String.valueOf(dados);
+        return converte;
+    }
+    public String converteIntString(int dados){
+        String converte = String.valueOf(dados);
+        return converte;
+    }
 
 }

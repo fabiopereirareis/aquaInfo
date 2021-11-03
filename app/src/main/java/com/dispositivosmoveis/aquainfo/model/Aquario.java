@@ -1,7 +1,7 @@
 package com.dispositivosmoveis.aquainfo.model;
 
 public class Aquario {
-    // atributos do obejto aquário
+    // atributos do objeto aquário
     private float largura;
     private float altura;
     private float comprimento;
@@ -19,7 +19,41 @@ public class Aquario {
             resultado = (aquario.getComprimento() * aquario.getLargura() * aquario.getAltura()) / 1000f;
         }
         return String.valueOf(resultado) + "/Litros";
+    }
+    // método para calcular a litragem do aquário
+    public float calcularLitragemFloat(Aquario aquario, char desconto){
+        float resultado = 0.0f ;
 
+        if (desconto == 's'){
+            resultado = (aquario.getComprimento() * aquario.getLargura() * aquario.getAltura()) / 1000f;
+            resultado *= 0.85f ;
+        }
+        if (desconto == 'n'){
+            resultado = (aquario.getComprimento() * aquario.getLargura() * aquario.getAltura()) / 1000f;
+        }
+        return resultado;
+    }
+//    método para calcular o filtro adequado
+    public String calcularFiltro(float litragem){
+        int vazao = (int) (litragem * 5);
+        return String.valueOf(vazao);
+    }
+
+    //    método para calcular a iluminação adequado
+    public String calcularAquecimento(float litragem){
+        int aquecimento = (int) (litragem * 1);
+        return String.valueOf(aquecimento);
+    }
+
+    //    método para calcular o aquecimento adequado
+    public String calcularIluminacao(float litragem, boolean plantas){
+        int iluminacao = 0;
+        if(plantas){
+            iluminacao = (int) (litragem * 1);
+        }else{
+            iluminacao = (int) (litragem / 2);
+        }
+        return String.valueOf(iluminacao);
     }
 
 //    métodos construtores

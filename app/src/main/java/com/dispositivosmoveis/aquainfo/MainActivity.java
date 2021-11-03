@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
 //        objetos da inteface de usuário
         TextView teste = findViewById(R.id.textView);
+        TextView saidaFiltro = findViewById(R.id.saidaFiltro);
+        TextView saidaIluminacao = findViewById(R.id.saidaIluminacao);
+        TextView saidaAquecedor = findViewById(R.id.saidaAquecedor);
         RadioButton radioSim = findViewById(R.id.radioSim);
         RadioButton radioNao = findViewById(R.id.radioNao);
 
@@ -47,13 +50,36 @@ public class MainActivity extends AppCompatActivity {
 
 //        saída de dados para o usuário
 
+////        calculo da litragem do aquário
+//        String resultado = "";
+//        if(radioSim.isChecked()){
+//            teste.setText(aquario.calcularLitragem(aquario,'s'));
+//        }else if(radioNao.isChecked()){
+//            teste.setText(aquario.calcularLitragem(aquario,'n'));
+//        }
 //        calculo da litragem do aquário
-        String resultado = "";
+        String strLitragem = "";
+        String strFiltro = "";
+        String strIluminacao = "";
+        String strAquecimento = "";
+        float litragem = 0.0f;
+//        int vazaoFiltro = 0;
         if(radioSim.isChecked()){
-            teste.setText(aquario.calcularLitragem(aquario,'s'));
+            litragem = aquario.calcularLitragemFloat(aquario,'s');
+//            vazaoFiltro = aquario.calcularFiltro(litragem);
+            strLitragem = metodos.converteFloatString(litragem);
+            strFiltro = aquario.calcularFiltro(litragem);
+//            strIluminacao = aquario.calcularIluminacao(litragem);
+            strAquecimento = aquario.calcularAquecimento(litragem);
+//            strLitragem = aquario.calcularLitragem(litragem);
+
         }else if(radioNao.isChecked()){
             teste.setText(aquario.calcularLitragem(aquario,'n'));
         }
+        teste.setText(strLitragem);
+        saidaFiltro.setText(strFiltro);
+        saidaIluminacao.setText(strIluminacao);
+        saidaAquecedor.setText(strAquecimento);
 
     }
 
